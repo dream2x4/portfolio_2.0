@@ -1,14 +1,15 @@
 <template>
+  <!-- Portfolio detail -->
   <div class="project-section">
   
     <div class="container-p-detail" style="margin-bottom: 2rem;">
       <div class="project-detail-container d-flex justify-content-center" style="gap: 2rem;">
-        <div class="project-detail-left">
-          <div class="project-title-hidden" v-if="selectedProject">
+        <div class="project-detail-left" v-if="selectedProject">
+          <div class="project-title-hidden">
             <p style="margin: 0; color: var(--vt-c-gold); font-weight: 700;">{{ selectedProject.projectCategories }}</p>
             <h1 style="margin-bottom: 1rem;">{{ selectedProject.projectName }}</h1>
           </div>
-          <img src="../assets/img/test_img.jpg" class="" alt="project image" style="margin: 0; width: 100%; height: auto;">
+          <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${selectedProject.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" class="mb-2" alt="project image" style="width: 100%;">
         </div>
         <div class="project-detail-right" v-if="selectedProject">
           <div class="project-title">
@@ -32,6 +33,7 @@
       </div>
     </div>
 
+    <!-- Go back -->
     <div class="back-button d-flex align-items-center">
       <button class="button" @click="goBack()">
         <svg xmlns="http://www.w3.org/2000/svg" style="height: 1.5rem; width: 1.5rem; margin-right: 1rem;" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">

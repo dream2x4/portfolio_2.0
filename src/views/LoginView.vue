@@ -1,4 +1,5 @@
 <template>
+  <!-- Login -->
   <div class="d-flex flex-column justify-content-center align-items-center" style="height: 768px;">
     <h1 style="margin-bottom: 2rem;">LOGIN</h1>
     <p style="margin: 0;">Username:</p>
@@ -30,7 +31,7 @@
     signInWithEmailAndPassword(auth, email.value, password.value)
     .then((data) => {
       console.log("test data", data)
-      router.push('/navguard')
+      router.push('/admin')
     })
     .catch((error) => {
       switch(error.code) {

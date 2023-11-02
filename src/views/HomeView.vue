@@ -2,7 +2,7 @@
 </script>
 
 <template>
-
+  <!-- Hero -->
   <div class="hero d-flex justify-content-center" id="top">
     <div class="col-10">
       <div class="hero-container">
@@ -29,6 +29,7 @@
     </div>
   </div>
 
+  <!-- About me -->
   <div class="about-me" id="about-me">
     <div class="col-12 d-flex justify-content-center">
       <div class="about-me-container col-10 col-sm-8 col-lg-6">

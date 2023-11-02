@@ -1,5 +1,6 @@
 <template>
 
+  <!-- Portfolio -->
   <div class="portfolio-section">
     <h1 style="margin-bottom: 2rem;">PORTFOLIO</h1>
 
@@ -50,7 +51,7 @@
 
             <div class="project-content">
 
-              <img src="../assets/img/test_img.jpg" class="" alt="project image" style="margin: 0; width: 100%; height: auto;">
+              <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${project.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" class="" alt="project image" style="margin: 0; width: 100%; height: auto;">
 
               <div style="padding: 1rem;">
 

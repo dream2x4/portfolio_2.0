@@ -35,7 +35,7 @@ const useProjects = () => {
     imgURL: ''
   })
 
-  //Display aphabatical order
+  //Display projects in alphabetical order
   function compare (a, b) {
     if ( a.projectName < b.projectName ){
       return -1;
@@ -57,7 +57,7 @@ const useProjects = () => {
         }
       })
 
-      //Sort array (alphabatical)
+      //Sort array in alphabetical order
       projects.value.sort(compare)
       
 
@@ -91,7 +91,7 @@ const useProjects = () => {
 
   //Update data
   const firebaseUpdateSingleItem = async (projectId) => {
-    //Image input value from image upload button in AdminView.vue
+    //Image input value from "Image upload" button in AdminView.vue
     let imageName = document.querySelector(`.id${projectId}`).value
 
     //Split to array
