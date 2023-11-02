@@ -1,0 +1,257 @@
+@import './base.css';
+
+/*fonts*/
+
+@import url("https://use.typekit.net/txd0mhh.css"); /*Raleway*/
+
+@font-face{
+  font-family: 'GlacialIndifference';
+  src:url('./fonts/GlacialIndifference-Regular.woff') format('woff'), url('./fonts/GlacialIndifference-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#app {
+  margin: 0 auto;
+
+  font-weight: normal;
+}
+
+body {
+  font-family: "raleway", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--vt-c-black);
+
+  background-color: var(--vt-c-light-grey);
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+/* Text */
+
+h1 {
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: 2rem;
+
+  color: var(--vt-c-gold);
+}
+
+h2 {
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: 1.4rem;
+  
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Button */
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: 1.2rem;
+}
+
+/* Input */
+
+input {
+  color: var(--vt-c-grey);
+  border: none;
+  border-radius: 25px;
+  background-color: var(--vt-c-white-soft);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 27rem;
+  margin-bottom: 1rem;
+}
+
+.form-select {
+  color: var(--vt-c-grey);
+  border: none;
+  border-radius: 25px;
+  background-color: var(--vt-c-white-soft);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 27rem;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  color: var(--vt-c-grey);
+  border: none;
+  border-radius: 25px;
+  background-color: var(--vt-c-white-soft);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  width: 27rem;
+  margin-bottom: 1rem;
+}
+
+input:focus-visible {
+  outline-color: var(--vt-c-grey);
+  color: var(--vt-c-black);
+}
+
+textarea:focus-visible {
+  outline-color: var(--vt-c-grey);
+  color: var(--vt-c-black);
+}
+
+.form-select:focus {
+  outline: auto;
+  outline-color: var(--vt-c-grey);
+  color: var(--vt-c-black);
+
+  box-shadow: none;
+}
+
+.form-select:focus-visible {
+  outline-color: var(--vt-c-grey);
+  color: var(--vt-c-black);
+}
+
+/* Animations */
+
+/*@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(150%);
+    opacity: 0;
+    transition: all 1s;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}*/
+
+.hiddenLeft {
+  opacity: 0;
+  transform: translateX(-6rem);
+  transition: all 1s;
+}
+
+.hiddenBottom {
+  opacity: 0;
+  transform: translateY(6rem);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hiddenLeft {
+    transition: none;
+  }
+}
+
+/* Scale */
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--vt-c-gold);
+  }
+
+  button:hover {
+    color: var(--vt-c-gold);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 576px){
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  input {
+    width: 16rem;
+  }
+
+  .form-select {
+    width: 16rem;
+  }
+
+  textarea {
+    width: 16rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 360px){
+    input {
+      width: 14rem;
+    }
+
+    .form-select {
+      width: 14rem;
+    }
+
+    textarea {
+      width: 14rem;
+    }
+  }
+}
