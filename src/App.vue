@@ -254,6 +254,15 @@ a {
 
 /* scale */
 @media (max-width: 540px) {
+  .navbar-toggler {
+color: var(--vt-c-white-soft);
+
+  margin-right: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
   .footer {
     flex-direction: column-reverse;
 

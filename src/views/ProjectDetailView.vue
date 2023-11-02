@@ -3,13 +3,13 @@
   <div class="project-section">
   
     <div class="container-p-detail" style="margin-bottom: 2rem;">
-      <div class="project-detail-container d-flex justify-content-center" style="gap: 2rem;">
+      <div class="project-detail-container d-flex justify-content-center">
         <div class="project-detail-left" v-if="selectedProject">
           <div class="project-title-hidden">
             <p style="margin: 0; color: var(--vt-c-gold); font-weight: 700;">{{ selectedProject.projectCategories }}</p>
             <h1 style="margin-bottom: 1rem;">{{ selectedProject.projectName }}</h1>
           </div>
-          <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${selectedProject.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" class="mb-2" alt="project image" style="width: 100%;">
+          <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${selectedProject.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" class="" alt="project image" style="width: 100%;">
         </div>
         <div class="project-detail-right" v-if="selectedProject">
           <div class="project-title">
@@ -83,6 +83,10 @@ const goBack = () => {
   padding: 12rem 4rem;
 }
 
+.project-detail-container {
+  gap: 2rem;
+}
+
 .project-detail-left {
   width: 60%;
 }
@@ -119,6 +123,10 @@ const goBack = () => {
 @media (max-width: 576px) {
   .project-section {
     padding: 12rem 2rem;
+  }
+
+  .project-detail-container {
+    gap: 1rem;
   }
 }
 </style>

@@ -59,7 +59,7 @@
       <!-- Image -->
       <div>
         <!-- <img :src="project.imgURL" class="mb-2" alt="project image" style="width: 100%;"> -->
-        <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${project.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" class="mb-2" alt="project image" style="width: 100%;">
+        <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${project.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" alt="project image" style="width: 100%; margin-bottom: 1rem;">
       </div>
 
       <button class="btn-delete" @click="firebaseDeleteSingleItem(project.id)" style="margin-bottom: 1rem;">
@@ -101,7 +101,7 @@
       </p>
     <!-- Image upload-->
       <p>
-        <input class="mb-2" :class="`id${project.id}`" type="file" label="File input" @change="uploadImg">
+        <input :class="`id${project.id}`" type="file" label="File input" @change="uploadImg">
       </p>
 
 
