@@ -1,4 +1,5 @@
 <template>
+  <!-- Contact -->
   <div class="nav-sub" id="top"></div>
   <div class="d-flex justify-content-center">
     <div class="contact-container col-10 col-sm-8 col-lg-6" style="text-align : center;">
@@ -67,6 +68,8 @@
 .contact-icon {
   margin-right: 0.5rem;
 }
+
+/* Scale */
 
 @media (max-width: 576px){
 

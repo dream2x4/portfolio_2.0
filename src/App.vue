@@ -68,7 +68,10 @@ let logOut = () => {
               <RouterLink to="/login">LOGIN</RouterLink>
             </li> -->
             <li class="nav-item">
-              <button class="logout-btn" @click="logOut" v-if="isLoggedIn">LOGOUT</button>
+              <button class="nav-btn" v-if="isLoggedIn" style="padding: 0;"><RouterLink to="/admin">ADMIN</RouterLink></button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-btn" @click="logOut" v-if="isLoggedIn">LOGOUT</button>
             </li>
           </ul>
         </div>
@@ -77,22 +80,12 @@ let logOut = () => {
   </header>
 
   <router-view v-slot="{ Component, route }">
-      <Transition name="fade" mode="out-in">
+    <Transition name="fade" mode="out-in">
         <div :key="route.name">  
-          <component :is="Component"></component>
-        </div>
-      </Transition>
-    </router-view>
-    
-<!-- makes error on switch between views
-  <RouterView v-slot="{ Component }">
-  <Transition name="fade">
-    <component :is="Component" />
-  </Transition>
-</RouterView>
- -->
-
-<!--   <RouterView />  old -->
+      <component :is="Component"></component>
+      </div>
+    </Transition>
+  </router-view>
 
 <!-- Footer -->
 <div class="footer col-12 d-flex align-items-center justify-content-between">
@@ -179,7 +172,7 @@ nav a.router-link-exact-active {
   background-color: var(--vt-c-white-soft);
 }
 
-.logout-btn {
+.nav-btn {
   font-family: 'GlacialIndifference';
   font-weight: normal;
 

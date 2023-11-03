@@ -16,7 +16,7 @@
     <h1 class="text-center" style="margin-top: 2rem; margin-bottom: 1rem;">ADD NEW PROJECT</h1>
 
    
-     <!-- Edit project-->
+     <!-- Add project-->
      <p>
         <input type="text" placeholder="New project name" v-model="AddProjectData.projectName" />
       </p>
@@ -61,13 +61,8 @@
 </template>
 
 <script setup>
-//import useProjects from '../modules/useProjects.js';
 
-//import { ref } from 'vue';
-
-//Image script
-
-/* Image upload start */
+/* Add project */
 
 import { collection, addDoc, doc  } from "firebase/firestore";
 import { getStorage, ref as fbref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
@@ -79,32 +74,11 @@ const {
   projects,
   getProjectsData, 
   AddProjectData
-  //AddProjectData
 } = useProjects()
-
-
-// const AddProjectData = ref({
-//     projectName: '',
-//     projectCategories: '',
-//     projectDescription: '',
-//     projectTech: '',
-//     projectTeam: '',
-//     projectUrl: '',
-//     imgURL: ''
-//   })
 
 onMounted(() => {
   getProjectsData()
 })
-
-// Add item data: title, description, image URL and have the button disabled until image is uploaded
-/* let addItemData = reactive({
-  AddItemDataTitle : '',
-  AddItemDataDescription : '',
-  imgURL: '',
-  uploadBtnDisabled: true
-}) */
-
 
  // Add dynamic data to Firebase Firestore
  const firebaseAddSingleItem = async() => {
@@ -123,9 +97,6 @@ onMounted(() => {
     console.log(imageName)
 
     await addDoc(collection(db, "projects"), {
-      // title: AddProjectData.projectName,
-      // description: AddProjectData.projectName,
-      // imgURL: AddProjectData.imgURL,
       projectName: AddProjectData.value.projectName,
       projectCategories: AddProjectData.value.projectCategories,
       projectDescription: AddProjectData.value.projectDescription,
@@ -199,10 +170,6 @@ uploadTask.on('state_changed',
   }  
 );
 }
-
-/* Image upload end */
-
-
 
 const dialogg = ref(null);
 

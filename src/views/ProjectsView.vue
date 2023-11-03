@@ -39,7 +39,7 @@
     <!-- Project Cards -->
     <div class="portfolio-container d-flex" id="projects">
       <div class="portfolio d-flex">
-        <!-- State -->
+        
         <div class="portfolio-item-container">
 
           <div @click="redirect(project.id)" style="cursor: pointer"
@@ -47,32 +47,27 @@
           :key="project.id"
           class="portfolio-item d-flex"
           >
-          <div class="portfolio-box" style="height: 100%;">
+            <div class="portfolio-box" style="height: 100%;">
 
-            <div class="project-content">
+              <div class="project-content">
 
-              <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${project.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" class="" alt="project image" style="margin: 0; width: 100%; height: auto;">
+                <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${project.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" class="" alt="project image" style="margin: 0; width: 100%; height: auto;">
 
-              <div style="padding: 1rem;">
+                <div style="padding: 1rem;">
 
-                <p style="margin: 0; color: var(--vt-c-gold); font-weight: 700;">
-                  {{ project.projectCategories }}
-                </p>
+                  <p style="margin: 0; color: var(--vt-c-gold); font-weight: 700;">
+                    {{ project.projectCategories }}
+                  </p>
 
-                <h3>
-                  {{ project.projectName }}
-                </h3>
-
-                <!-- Image -->
-                <div>
-                  <!--<img :src="project.imgURL" class="project-img" alt="project image">-->
-                </div>
-                <div class="has-text-right">
+                  <h3>
+                    {{ project.projectName }}
+                  </h3>
+                  <div class="has-text-right">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
         </div>
 

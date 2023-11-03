@@ -19,6 +19,7 @@
         </div>
       </teleport>
 
+      <!-- Quick add -->
       <div>
         <input type="text" placeholder="Enter your project name" v-model="AddProjectData.projectName" >
       </div>
@@ -32,6 +33,7 @@
 
     <hr style="width: 100%;">
 
+    <!-- Project -->
     <div class="edit-container" style="padding: 2rem 0; overflow-wrap: break-word;" v-for="project in projects" :key="project">
       <!-- Project overview -->
       <h1 style="margin-bottom: 1rem;">{{ project.projectName }}</h1>
@@ -62,6 +64,7 @@
         <img :src="`https://firebasestorage.googleapis.com/v0/b/test-project-7a051.appspot.com/o/images%2F${project.imgURL}?alt=media&token=3d8c8b75-7be5-4983-a8a8-aafce3444f88&_gl=1*us7tjp*_ga*MTA0NDAzODM4MS4xNjg1ODc1MDMz*_ga_CW55HF8NVT*MTY5ODkzMjU4NC4xMi4xLjE2OTg5MzQ0MzUuNjAuMC4w`" alt="project image" style="width: 100%; margin-bottom: 1rem;">
       </div>
 
+      <!-- Delete button -->
       <button class="btn-delete" @click="firebaseDeleteSingleItem(project.id)" style="margin-bottom: 1rem;">
         <svg xmlns="http://www.w3.org/2000/svg" style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;" fill="currentColor" class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/>
@@ -104,7 +107,7 @@
         <input :class="`id${project.id}`" type="file" label="File input" @change="uploadImg">
       </p>
 
-
+      <!-- Submit button -->
       <button class="btn-edit" @click="firebaseUpdateSingleItem(project.id)">
         <svg xmlns="http://www.w3.org/2000/svg" style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
@@ -112,7 +115,7 @@
         Edit item
       </button>
     </div>
-    <hr ><!-- style="width: 100%;" -->
+    <hr >
   </div>
 </template>
   
@@ -177,6 +180,8 @@ onMounted(() => {
 .edit-container {
   width: 27rem;
 }
+
+/* Scale */
 
 @media (max-width: 576px){
   .edit-container {

@@ -66,11 +66,6 @@
     </div>
   </div>
 
-  <!-- <main>
-    Welcome!
-    <div :class=" { active: isActive }">Test</div>
-  </main> -->
-
 </template>
 
 <script setup>
@@ -78,7 +73,7 @@ import { ref, onMounted } from 'vue';
 
 const isActive = ref(true);
 
-// Animation
+// Intersection observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);
@@ -163,7 +158,6 @@ header {
 .upper-skill-container {
   display:flex;
   flex-wrap:wrap
- /*  justify-content: space-between; */
 }
 
 .skill {
@@ -172,6 +166,8 @@ header {
   margin-bottom: 0rem;
   padding-right: 1rem;
 }
+
+/* Scale */
 
 @media (max-width: 992px) {
   .hero-container {
