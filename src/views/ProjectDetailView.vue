@@ -30,7 +30,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" style="height: 1.5rem; width: 1.5rem; margin-right: 1rem;" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                 <circle cx="8" cy="8" r="8"/>
               </svg>
-              VIEW PROJECT
+              {{ selectedProject.projectBtn }}
             </button>
           </a>
         </div>

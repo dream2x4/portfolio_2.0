@@ -1,6 +1,6 @@
 <template>
   <!-- Login -->
-  <div class="d-flex flex-column justify-content-center align-items-center" style="height: 768px;">
+  <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
     <h1 style="margin-bottom: 2rem;">LOGIN</h1>
     <p style="margin: 0;">Username:</p>
     <input class="field" type="text" placeholder="Enter your Username" v-model="email" />
@@ -52,7 +52,6 @@
       }
     })
   }
-  
 </script>
   
 <style scoped>

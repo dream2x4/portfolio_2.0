@@ -1,7 +1,7 @@
 <template>
   <!-- Add new project -->
   <div class="NavGuard d-flex flex-column justify-content-center align-items-center">
-    <div class="d-flex flex-column justify-content-center align-items-center" style="height: 768px;">
+    <div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
       <h1 style="margin-bottom: 2rem;">ADD/EDIT PROJECTS</h1>
       <button @click="isOpen = true" style="margin-bottom: 2rem;">
         <svg xmlns="http://www.w3.org/2000/svg" style="height: 1.5rem; width: 1.5rem; margin-right: 0.5rem;" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
@@ -56,6 +56,9 @@
         ProjectTeam: {{ project.projectTeam }}
       </p>
       <p>
+        ProjectBtn: {{ project.projectBtn }}
+      </p>
+      <p>
         ProjectUrl: {{ project.projectUrl }}
       </p>
       <!-- Image -->
@@ -97,6 +100,10 @@
 
       <p>
         <input type="text" placeholder="Add team" v-model="project.projectTeam" />
+      </p>
+
+      <p>
+        <input type="text" placeholder="Add btn name" v-model="project.projectBtn" />
       </p>
 
       <p>

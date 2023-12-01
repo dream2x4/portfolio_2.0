@@ -101,14 +101,14 @@ header {
 .hero {
   color: var(--vt-c-white-soft);
   background-color: #d8d8d7;
-  height: 768px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: url(../assets/img/portfolio_hero.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: left center;
   background-repeat: no-repeat;
 
   transition: 0.4s;
@@ -171,15 +171,11 @@ header {
 
 @media (max-width: 992px) {
   .hero-container {
-    width: 60%;
+    width: 80%;
   }
 }
 
 @media (max-width: 576px){
-  .hero-container {
-    width: 80%;
-  }
-
   .hero-btn-container {
     flex-direction: column;
   }

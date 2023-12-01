@@ -45,6 +45,10 @@
       </p>
 
       <p>
+        <input type="text" placeholder="Add btn name" v-model="AddProjectData.projectBtn" />
+      </p>
+
+      <p>
         <input type="text" placeholder="Add url" v-model="AddProjectData.projectUrl" />
       </p>
       <!-- Image upload-->
@@ -102,6 +106,7 @@ onMounted(() => {
       projectDescription: AddProjectData.value.projectDescription,
       projectTech: AddProjectData.value.projectTech,
       projectTeam: AddProjectData.value.projectTeam,
+      projectBtn: AddProjectData.value.projectBtn,
       projectUrl: AddProjectData.value.projectUrl,
       imgURL: imageName
     }

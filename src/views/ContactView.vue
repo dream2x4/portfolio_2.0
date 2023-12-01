@@ -43,7 +43,7 @@
 }
 
 .contact-container {
-  height: 768px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

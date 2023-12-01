@@ -79,6 +79,7 @@ const useProjects = () => {
         projectDescription: AddProjectData.value.projectDescription,
         projectTech: AddProjectData.value.projectTech,
         projectTeam: AddProjectData.value.projectTeam,
+        projectBtn: AddProjectData.value.projectBtn,
         projectUrl: AddProjectData.value.projectUrl,
         imgURL: AddProjectData.value.imgURL
       }
@@ -112,6 +113,7 @@ const useProjects = () => {
         projectDescription: projectToUpdate.projectDescription,
         projectTech: projectToUpdate.projectTech,
         projectTeam: projectToUpdate.projectTeam,
+        projectBtn: projectToUpdate.projectBtn,
         projectUrl: projectToUpdate.projectUrl,
         imgURL: projectToUpdate.imgURL
       });
